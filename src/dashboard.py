@@ -208,6 +208,20 @@ if result['bound_constrained']:
         "It reflects the boundary of reliable comparable data, not a modeled demand peak — "
         "treat it as lower-confidence."
     )
+    with st.expander("Why is this less reliable?"):
+        st.markdown(
+            "The simulation only tests prices within a **trusted range** built from what "
+            "comparable listings actually charge, this keeps the model from extrapolating "
+            "into price territory it has no real data to reason about.\n\n"
+            "In this case, the revenue curve was still rising (or falling) at the very edge "
+            "of that range, so the recommended price is the *boundary* of what's trustworthy, "
+            "not a genuine peak the model found. The real revenue-maximizing price might sit "
+            "beyond this range, but there isn't enough comparable-listing data at that price "
+            "point to estimate demand with confidence.\n\n"
+            "**What this means for you:** treat this number as a directional signal (e.g. "
+            "\"price higher\" or \"price lower\") rather than a precise target, and consider "
+            "checking listings just outside the typical range for this comp group manually."
+        )
 
 # --- Revenue curve ---
 fig_curve = go.Figure()
