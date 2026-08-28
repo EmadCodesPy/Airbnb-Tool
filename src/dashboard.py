@@ -112,7 +112,7 @@ from simulate import (
 
 st.set_page_config(page_title="Amsterdam Airbnb Pricing Engine", layout="wide")
 st.title("Amsterdam Airbnb Dynamic Pricing")
-st.caption("Hedonic pricing + comp-based occupancy modeling — a recommendation, not a causal price effect")
+st.caption("Hedonic pricing + comp-based occupancy modeling; a recommendation, not a causal price effect")
 
 # --- Build the map dataframe once per session ---
 @st.cache_data
@@ -205,7 +205,7 @@ col2.metric("Expected 30-day revenue at recommended price", f"€{expected_reven
 if result['bound_constrained']:
     st.warning(
         "This recommendation sits at the edge of the trusted comp-price range. "
-        "It reflects the boundary of reliable comparable data, not a modeled demand peak — "
+        "It reflects the boundary of reliable comparable data, not a modeled demand peak; "
         "treat it as lower-confidence."
     )
     with st.expander("Why is this less reliable?"):
