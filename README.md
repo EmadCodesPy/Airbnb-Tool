@@ -1,5 +1,6 @@
-
 # Amsterdam Airbnb Dynamic Pricing & Revenue Optimization
+
+Check it out here: [emads-airbnb-tool.streamlit.app](https://emads-airbnb-tool.streamlit.app/)
 
 A decision-support tool for Airbnb hosts: given a listing, what should it charge, and what's the revenue upside from adjusting price? Built as an end-to-end pipeline — data ingestion, two predictive models, a revenue simulation engine, and an interactive dashboard — using real Amsterdam market data.
 
